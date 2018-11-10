@@ -1,7 +1,6 @@
 from flask import Flask, render_template,request
 app = Flask(__name__)
-
-generatedStatement = "something"
+from parser import generatedStatement
 
 @app.route('/')
 def hello_name():
@@ -9,7 +8,7 @@ def hello_name():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    text = request.form['Text']
+    text = request.form['Search']
     processed_text = text.upper()
     return render_template('index.html',name= text)
 
