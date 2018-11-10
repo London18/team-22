@@ -1,4 +1,3 @@
-
 from pymongo import MongoClient
 from stop_words import get_stop_words
 import nltk
@@ -8,17 +7,14 @@ client = MongoClient()
 client = MongoClient('localhost', 27017)
 
 db = client['test']
-collection = db['customer']
 customer = db.customer
 
-# pprint.pprint(customer.find_one())
-
 qndict = customer.find_one()
+qndictOld = qndict.copy()
 
 ### Parser Function ###
 
 stop_words = set(get_stop_words('english'))
-
 
 def myKeyWordParser(myString):
     myStringLowered = myString.lower()   
@@ -29,9 +25,10 @@ def myKeyWordParser(myString):
             filtered_sentence.append(w)
     return filtered_sentence
 
-
 ### End of Parser Function ####
 
+
+storeMyAwnsers = []
 def checkOccurrences(parsed_input):
     possible_questions = []
     for qn in qndict:
@@ -47,20 +44,30 @@ def checkOccurrences(parsed_input):
                 counter += 1
                 if myKeyWord not in input_['keywords']:
                         input_['keywords'].append(myKeyWord)
+        #change question to awnser for actual output
+        possible_questions.append((input_['answer'], counter, input_['links']))
+    storeMyAwnsers.append(sorted(possible_questions, reverse = True, key = lambda x: x[1]))
+    
 
-        possible_questions.append((input_['question'], counter, input_['links']))
-        
-    pprint.pprint(possible_questions)
-    pprint.pprint(qndict)
+#     customer.replace_one({ },qndict)    
+
     
 
 ####### Parsing of user Question #######
-
-input_1 = 'do you share data'
+input_1 = 'do xvkjk xckjvnxckvnxckl xcvkjncklvdlkf share data you nonce, be careful'
+input_2 = "Why do you not like my details?"
 parsed_input = myKeyWordParser(input_1)
-# input_2 = "Why do you not like my details?"
-# parsed_input2 = myKeyWordParser(input_2)
+parsed_input2 = myKeyWordParser(input_2)
 ####### End of Parsing  user question ########
 
 checkOccurrences(parsed_input)
-# checkOccurrences(parsed_input2)
+checkOccurrences(parsed_input2)
+
+counter = 1
+for eachAnswer in storeMyAwnsers:
+        
+        print("The {}st answer is................... ".format(counter))
+        print(eachAnswer[0])
+        counter += 1
+
+# pprint.pprint(storeMyAwnsers)
