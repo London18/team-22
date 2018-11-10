@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<body>
+
+<form method="POST">
+
+<div id="input">
+What are you looking for? <input name="Text" id="TxtInput" type="text">
+<input type="submit">
+</div>
+</form>
+<button id="NewPage" onclick="New()" >Click For New Info</button>
+<div id="answer">
+{{ name }}
+</div>
+
+<div id="addAnswer" style="display:none">
+<form method="POST">
+<textarea rows="4" cols="50">
+A LOT OF STUFF!!
+</textarea> 
+<input type="submit">
+</form>
+</div>
+</body></html>
+
+
+<script>
+function New(){
+	
+	document.getElementById("input").style.display = "none";
+	document.getElementById("NewPage").style.display = "none";
+	document.getElementById("answer").style.display="none";
+	document.getElementById("addAnswer").style.display="initial";
+}
+</script>
