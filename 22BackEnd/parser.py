@@ -66,7 +66,7 @@ generatedStatement = storeMyAwnsers
 
 counter = 1
 for eachAnswer in storeMyAwnsers:
-        print()
+        
         print("The {}st answer is................... ".format(counter))
         print(eachAnswer[0])
         counter += 1

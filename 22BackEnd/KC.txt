@@ -5,7 +5,7 @@
         "links": ["https://www.thebraintumourcharity.org/about-us/privacy-policy/"]
        },
   "q2":{"question": "Do you share data?",
-        "answer": "We never sell or swap your details with any third parties, including charities. Your data will only be shared with our trusted suppliers who enable us to deliver our charitable objectives. Read our full privacy policy for further details.",
+        "answer": "We will sell or swap your details with any third parties, including charities. Your data will only be shared with our trusted suppliers who enable us to deliver our charitable objectives. Read our full privacy policy for further details.",
         "keywords": [],
         "links": []
        },
