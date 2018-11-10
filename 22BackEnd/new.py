@@ -51,30 +51,6 @@ def checkOccurrences(parsed_input):
     
 #     customer.replace_one({ },qndict)    
 
-    
-
-####### Parsing of user Question #######
-# input_2 = "Why do you not like my details?"
-# input_3 = "what is your alternative phone number"
-# parsed_input = myKeyWordParser(input_1)
-# parsed_input2 = myKeyWordParser(input_2)
-####### End of Parsing  user question ########
-
-# checkOccurrences(parsed_input)
-# checkOccurrences(parsed_input2)
-# generatedStatement = storeMyAwnsers
-
-counter = 1
-for eachAnswer in storeMyAwnsers:
-        print()
-        print("The {}st answer is................... ".format(counter))
-        print(eachAnswer[0])
-        counter += 1
-        print()
-        print()
-
-# pprint.pprint(storeMyAwnsers)
-
 @app.route('/')
 def hello_name():
    return render_template('index.html')
@@ -83,8 +59,10 @@ def hello_name():
 def my_form_post():
     storeMyAwnsers.clear()
     text = request.form['Search']
+   
     textParsed = myKeyWordParser(text)
     inStrings = checkOccurrences(textParsed)
+    print(storeMyAwnsers[0][0])
     return render_template('index.html',name= storeMyAwnsers[0][0])
 
 if __name__ == '__main__':

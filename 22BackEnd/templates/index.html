@@ -20,62 +20,68 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //web font -->
 
 <style>
-	#w3layouts-errortext h2 {
-
-		color: red;
-	}
+ h1 {
+	 text-align: center;
+	 color: red;
+ }
+ h4 {
+	text-align: center;
+	color: rgb(197, 110, 29);
+ }
+ input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.copyright {
+	text-align: center;
+}
+body {
+	/* background-color: blue; */
+	background-image: url("nikback.png");
+}
 </style>
 </head>
 <body>
 	<!-- main -->
-	<div class="agileits-main"> 
-		<div class="agileinfo-row">
-			<div class="w3top-nav">	
-				<div class="w3top-nav-left">	
-					<h1><a href="index.html">Knowledge Base System</a></h1>
-				</div>	
-				<!--<div class="w3top-nav-right">	
-					<ul>
-						<li><a href="index.html" class="active">Home</a></li>
-						<li><a href="#">About</a></li>  
-						<li><a href="#">Blog</a></li> 
-						<li><a href="#">Contact</a></li>
-					</ul> 
-				</div>	-->
-				<div class="clear"></div>
-			</div>	
-			<div class="w3layouts-errortext">
+			<h1>~The KBS~</h1>	
+
+		
 				<!-- <img src="images/logo.png" alt=""/> -->
-				<h2>Welcome to the knowledge base system </h2>
-				<p class="w3lstext">What do you want to look up? </p>
+				<h4>:)</h4>
+				<br>
+				<br>
+				<br>
+				<center> 
 				<div class="agile-search"> 
 					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Enter your search term..." id="search" required="">
+							<p class="w3lstext">What do you want to look up? </p>
+						<input type="text" name="Search" placeholder="Enter your search term..." id="search" required=" style="font-size:18pt;height:420px;width:200px;">
 						<input type="submit" value="Search" id = "searchBTN">
 					</form> 
 				</div>
-			</div>	
-		</div>	
-	</div>	
-	<button id="NewPage" onclick="New()" >Click For New Info</button>
+				</center>
+	<br>
 	<div id="answer">
-		{{ name }}
+		<center> 
+
+			{{name}}
+		
+	</center>
 		</div>
 	<!-- //main -->
 	<!-- copyright -->
-	<div class="copyright w3-agile">
-		<p>© 2018 The Brain Tumour Charity . All rights reserved | Designed by VeintiDos</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="copyright">
+		<b> <p>© 2018 The Brain Tumour Charity . All rights reserved | Designed by VeintiDos</p> </b>
 	</div>
 	<!-- //copyright --> 
 </body>
 </html>
-
-<script>
-	function New(){
-		
-		document.getElementById("search").style.display = "none";
-		document.getElementById("NewPage").style.display = "none";
-		document.getElementById("answer").style.display="none";
-		document.getElementById("addAnswer").style.display="initial";
-	}
-	</script>
