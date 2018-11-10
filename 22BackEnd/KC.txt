@@ -1,0 +1,35 @@
+{
+  "q1":{"question": "How is my data stored?",
+        "answer": "We hold your data on a secure database. Access to this system is limited and there is restricted access to data based on a person's role in the organisation. Read our full privacy policy for further information.",
+        "keywords": [],
+        "links": ["https://www.thebraintumourcharity.org/about-us/privacy-policy/"]
+       },
+  "q2":{"question": "Do you share data?",
+        "answer": "We never sell or swap your details with any third parties, including charities. Your data will only be shared with our trusted suppliers who enable us to deliver our charitable objectives. Read our full privacy policy for further details.",
+        "keywords": [],
+        "links": []
+       },
+  "q3":{"question": "How do you use my details?",
+        "answer": "We use and store your details so that we can provide you with the best possible service every time you contact us and allow us to keep you up-to-date on our work.",
+        "keywords": [],
+        "links": []
+       },
+  "q4":{"question": "Why do you need my phone number?",
+        "answer": "In case we need to get in touch regarding a contact you have made with us, whether this is any fundraising you have completed or any purchases you have made from our shop. We do not share your details with any third parties.",
+        "keywords": [],
+        "links": []
+       },
+  "q5":{"question": "When was The Charity formed?",
+        "answer": "The Brain Tumour Charity was officially formed in 2013, from a merger of three charities, but it has a history that reaches back as far as 1996. Read more about this on our webpage about our history.",
+        "keywords": [],
+        "links": []
+       },
+  "q6":{"question": "Why do you need my phone number?",
+        "answer": "In case we need to get in touch regarding a contact you have made with us, whether this is any fundraising you have completed or any purchases you have made from our shop. We do not share your details with any third parties.",
+        "keywords": ["www.google.com"],
+        "links": []
+       }
+}
+
+
+
