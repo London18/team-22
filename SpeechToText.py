@@ -12,7 +12,7 @@ audioType = "audio/mp3"
 service = SpeechToTextV1(
     ## url is optional, and defaults to the URL below. Use the correct URL for your region.
     url='https://gateway-syd.watsonplatform.net/speech-to-text/api',
-    iam_apikey='')
+    iam_apikey='API_KEY_HERE')
 
 models = service.list_models().get_result()
 #print(json.dumps(models, indent=2))
